@@ -1,4 +1,4 @@
-// Copyright (c) 2021-2023 Koji Hasegawa.
+// Copyright (c) 2023 Koji Hasegawa.
 // This software is released under the MIT License.
 
 using System;
@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace TestHelper.Input.TestDoubles
 {
-    public class StubInput : InputWrapper
+    public class StubInputKey : InputWrapper
     {
         public KeyCode[] PushedKeys { get; set; } = Array.Empty<KeyCode>();
 
