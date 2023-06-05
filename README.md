@@ -1,5 +1,9 @@
 # Input Test Helper
 
+[![Meta file check](https://github.com/nowsprinting/test-helper.input/actions/workflows/metacheck.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/metacheck.yml)
+[![Test](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml)
+[![openupm](https://img.shields.io/npm/v/com.nowsprinting.test-helper.input?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.nowsprinting.test-helper.input/)
+
 Reference implementation wrapper for tests using Input Manager (`UnityEngine.Input`).
 
 Required Unity 2019 LTS or later.
