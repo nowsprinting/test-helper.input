@@ -1,12 +1,11 @@
 {
   "name": "com.nowsprinting.test-helper.input",
   "description": "Test helper library for Input Manager (UnityEngine.Input).",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Koji Hasegawa <hasegawa@hubsys.co.jp> (https://github.com/nowsprinting)",
   "category": "Unity Test Framework",
   "changelogUrl": "https://github.com/nowsprinting/test-helper.input/releases",
-  "dependencies": {
-  },
+  "dependencies": {},
   "displayName": "Input Test Helper",
   "documentationUrl": "https://github.com/nowsprinting/test-helper.input/blob/master/README.md",
   "files": [
