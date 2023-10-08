@@ -18,11 +18,14 @@ You can inject test stub in your tests by replacing it with a `InputWrapper` ins
 
 Usage:
 
-1.Replace `UnityEngine.Input` to `TestHelper.Input.InputWrapper` instance in your product code.
+1.Insert the code below into your product code, so replace `UnityEngine.Input` to `TestHelper.Input.InputWrapper` instance.
 
 ```csharp
 internal IInput Input { private get; set; } = new InputWrapper();
 ```
+
+> **Note**  
+> `InputWrapper` also works at runtime, but if you want to strip the extra assembly (`TestHelper.Input`) from your IL2CPP build, you can use the `#if UNITY_INCLUDE_TESTS` directive.
 
 2.Create test stub in your test.
 
@@ -121,11 +124,8 @@ Add this repository as a submodule to the Packages/ directory in your project.
 Run the command below:
 
 ```bash
-git submodule add https://github.com/nowsprinting/test-helper.monkey.git Packages/com.nowsprinting.test-helper.monkey
+git submodule add https://github.com/nowsprinting/test-helper.input.git Packages/com.nowsprinting.test-helper.input
 ```
-
-> **Warning**  
-> Required install [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@latest) package v1.3 or later for running tests.
 
 
 ## Release workflow
