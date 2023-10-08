@@ -124,11 +124,8 @@ Add this repository as a submodule to the Packages/ directory in your project.
 Run the command below:
 
 ```bash
-git submodule add https://github.com/nowsprinting/test-helper.monkey.git Packages/com.nowsprinting.test-helper.monkey
+git submodule add https://github.com/nowsprinting/test-helper.input.git Packages/com.nowsprinting.test-helper.input
 ```
-
-> **Warning**  
-> Required install [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@latest) package v1.3 or later for running tests.
 
 
 ## Release workflow
