@@ -9,19 +9,19 @@
   "displayName": "Input Test Helper",
   "documentationUrl": "https://github.com/nowsprinting/test-helper.input/blob/master/README.md",
   "files": [
-    "Documentation~",
-    "Runtime",
-    "Runtime*",
-    "Tests",
-    "Tests*",
+    "Documentation~/",
+    "Runtime/",
+    "Runtime.meta",
+    "Tests/",
+    "Tests.meta",
     "LICENSE.md*",
     "package.json*",
     "README.md*"
   ],
   "keywords": [
+    "Input Manager",
     "TestFramework",
-    "test",
-    "Input Manager"
+    "test"
   ],
   "license": "MIT",
   "licensesUrl": "https://github.com/nowsprinting/test-helper.input/blob/master/LICENSE.md",
