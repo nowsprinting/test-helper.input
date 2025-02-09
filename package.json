@@ -7,7 +7,7 @@
   "changelogUrl": "https://github.com/nowsprinting/test-helper.input/releases",
   "dependencies": {},
   "displayName": "Input Test Helper",
-  "documentationUrl": "https://github.com/nowsprinting/test-helper.input/blob/master/README.md",
+  "documentationUrl": "https://nowsprinting.github.io/test-helper.input/",
   "files": [
     "Documentation~/",
     "Runtime/",
