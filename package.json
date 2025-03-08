@@ -1,6 +1,6 @@
 {
   "name": "com.nowsprinting.test-helper.input",
-  "description": "Test helper library for Input Manager (UnityEngine.Input).",
+  "description": "Wrapper and test stubs reference implementation for Input Manager (Legacy, UnityEngine.Input).",
   "version": "1.0.1",
   "author": "Koji Hasegawa <hasegawa@hubsys.co.jp> (https://github.com/nowsprinting)",
   "category": "Unity Test Framework",
@@ -19,9 +19,10 @@
     "README.md*"
   ],
   "keywords": [
-    "Input Manager",
+    "Unity",
     "TestFramework",
-    "test"
+    "Input Manager",
+    "testing"
   ],
   "license": "MIT",
   "licensesUrl": "https://github.com/nowsprinting/test-helper.input/blob/master/LICENSE.md",
