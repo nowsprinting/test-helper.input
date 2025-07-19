@@ -4,7 +4,7 @@
 [![Test](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml)
 [![openupm](https://img.shields.io/npm/v/com.nowsprinting.test-helper.input?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.nowsprinting.test-helper.input/)
 
-Libraries for mocking Input Manager (Legacy, [UnityEngine.Input](https://docs.unity3d.com/ScriptReference/Input.html)).  
+Library for mocking the Input Manager (Legacy, [UnityEngine.Input](https://docs.unity3d.com/ScriptReference/Input.html)).
 Required Unity 2019 LTS or later.
 
 
@@ -18,7 +18,7 @@ You can inject a test stub in your tests by replacing it with an `InputWrapper` 
 
 Usage:
 
-#### 1.Insert the code below into your product code, so replace `UnityEngine.Input` to `TestHelper.Input.InputWrapper` instance.
+#### 1. Insert the code below into your product code to replace `UnityEngine.Input` with a `TestHelper.Input.InputWrapper` instance
 
 ```csharp
 #if UNITY_INCLUDE_TESTS
@@ -29,7 +29,7 @@ Usage:
 > [!TIP]  
 > `InputWrapper` also works at runtime, but you can remove the `TestHelper.Input` assembly from the build using the `#if UNITY_INCLUDE_TESTS` directive.
 
-#### 2.Create test stub in your test.
+#### 2. Create test stub in your test
 
 ```csharp
 public class StubInput : InputWrapper
@@ -43,7 +43,7 @@ public class StubInput : InputWrapper
 }
 ```
 
-#### 3.Write test using test stub.
+#### 3. Write test using test stub
 
 ```csharp
 [UnityTest]
