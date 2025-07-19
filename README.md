@@ -13,8 +13,8 @@ Required Unity 2019 LTS or later.
 
 ### Mocking `UnityEngine.Input`
 
-`UnityEngine.Input` class provides static methods.
-You can inject a test stub in your tests by replacing it with an `InputWrapper` instance.
+The `UnityEngine.Input` class provides static methods.
+You can inject test stubs into your tests by replacing `Input` with the `IInput` interface.
 
 Usage:
 
