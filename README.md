@@ -4,30 +4,32 @@
 [![Test](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml)
 [![openupm](https://img.shields.io/npm/v/com.nowsprinting.test-helper.input?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.nowsprinting.test-helper.input/)
 
-Wrapper and test stubs reference implementation for Input Manager (Legacy, [UnityEngine.Input](https://docs.unity3d.com/ScriptReference/Input.html)).  
+Libraries for mocking Input Manager (Legacy, [UnityEngine.Input](https://docs.unity3d.com/ScriptReference/Input.html)).  
 Required Unity 2019 LTS or later.
 
 
 
 ## Features
 
-### Wrapper class for `UnityEngine.Input`
+### Mocking `UnityEngine.Input`
 
 `UnityEngine.Input` class provides static methods.
-You can inject test stub in your tests by replacing it with a `InputWrapper` instance.
+You can inject a test stub in your tests by replacing it with an `InputWrapper` instance.
 
 Usage:
 
-1.Insert the code below into your product code, so replace `UnityEngine.Input` to `TestHelper.Input.InputWrapper` instance.
+#### 1.Insert the code below into your product code, so replace `UnityEngine.Input` to `TestHelper.Input.InputWrapper` instance.
 
 ```csharp
-internal IInput Input { private get; set; } = new InputWrapper();
+#if UNITY_INCLUDE_TESTS
+    internal IInput Input { private get; set; } = new InputWrapper();
+#endif
 ```
 
-> **Note**  
-> `InputWrapper` also works at runtime, but if you want to strip the extra assembly (`TestHelper.Input`) from your IL2CPP build, you can use the `#if UNITY_INCLUDE_TESTS` directive.
+> [!TIP]  
+> `InputWrapper` also works at runtime, but remove `TestHelper.Input` assembly from build using the `#if UNITY_INCLUDE_TESTS` directive.
 
-2.Create test stub in your test.
+#### 2.Create test stub in your test.
 
 ```csharp
 public class StubInput : InputWrapper
@@ -41,7 +43,7 @@ public class StubInput : InputWrapper
 }
 ```
 
-3.Write test using test stub.
+#### 3.Write test using test stub.
 
 ```csharp
 [UnityTest]
