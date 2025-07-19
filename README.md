@@ -27,7 +27,7 @@ Usage:
 ```
 
 > [!TIP]  
-> `InputWrapper` also works at runtime, but remove `TestHelper.Input` assembly from build using the `#if UNITY_INCLUDE_TESTS` directive.
+> `InputWrapper` also works at runtime, but you can remove the `TestHelper.Input` assembly from the build using the `#if UNITY_INCLUDE_TESTS` directive.
 
 #### 2.Create test stub in your test.
 
