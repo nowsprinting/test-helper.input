@@ -131,6 +131,9 @@ make create_project
 UNITY_VERSION=2019.4.40f1 make -k test
 ```
 
+> [!WARNING]  
+> You must select "Input Manager (Old)" or "Both" in the **Project Settings > Player > Active Input Handling** for running tests.
+
 
 ### Release workflow
 
