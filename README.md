@@ -3,6 +3,7 @@
 [![Meta file check](https://github.com/nowsprinting/test-helper.input/actions/workflows/metacheck.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/metacheck.yml)
 [![Test](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/test-helper.input/actions/workflows/test.yml)
 [![openupm](https://img.shields.io/npm/v/com.nowsprinting.test-helper.input?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.nowsprinting.test-helper.input/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/nowsprinting/test-helper.input)
 
 Library for mocking the Input Manager (Legacy, [UnityEngine.Input](https://docs.unity3d.com/ScriptReference/Input.html)).  
 Required Unity 2019 LTS or later.
