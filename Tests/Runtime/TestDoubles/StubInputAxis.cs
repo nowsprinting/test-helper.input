@@ -2,7 +2,6 @@
 // This software is released under the MIT License.
 
 using System;
-using System.Linq;
 
 namespace TestHelper.Input.TestDoubles
 {
@@ -24,7 +23,15 @@ namespace TestHelper.Input.TestDoubles
 
         public override float GetAxis(string axisName)
         {
-            return Axes.FirstOrDefault(a => a.Name == axisName).Value;
+            foreach (var axis in Axes)
+            {
+                if (axis.Name == axisName)
+                {
+                    return axis.Value;
+                }
+            }
+
+            return 0f;
         }
     }
 }

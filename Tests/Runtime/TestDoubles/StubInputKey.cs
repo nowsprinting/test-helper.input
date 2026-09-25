@@ -2,7 +2,6 @@
 // This software is released under the MIT License.
 
 using System;
-using System.Linq;
 using UnityEngine;
 
 namespace TestHelper.Input.TestDoubles
@@ -13,7 +12,15 @@ namespace TestHelper.Input.TestDoubles
 
         public override bool GetKey(KeyCode key)
         {
-            return PushedKeys.Contains(key);
+            foreach (var pushedKey in PushedKeys)
+            {
+                if (pushedKey == key)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
