@@ -47,15 +47,15 @@ public class StubInput : InputWrapper
 #### 3. Write test using test stub
 
 ```csharp
-[UnityTest]
-public IEnumerator PushW_MoveForward()
+[Test]
+public async Task PushW_MoveForward()
 {
     var sut = new GameObject().AddComponent<SUT>();
     var stub = new StubInput();
     sut.Input = stub; // Inject test stub
 
     stub.PushedKeys = new[] { KeyCode.W }; // Push W key
-    yield return new WaitForSeconds(0.5f);
+    await Task.Delay(500);
     stub.PushedKeys = Array.Empty<KeyCode>(); // Release key
 
     var actual = sut.transform.position;
@@ -120,6 +120,10 @@ Run the command below:
 ```bash
 git submodule add git@github.com:nowsprinting/test-helper.input.git Packages/com.nowsprinting.test-helper.input
 ```
+
+> [!WARNING]\
+> Required installation packages for running tests (when embedded package or adding to the `testables` in manifest.json), as follows:
+> - [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@latest) package v1.3.4 or later
 
 
 ### Run tests

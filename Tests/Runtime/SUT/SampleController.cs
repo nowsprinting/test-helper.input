@@ -1,10 +1,16 @@
-// Copyright (c) 2023 Koji Hasegawa.
+// Copyright (c) 2023-2026 Koji Hasegawa.
 // This software is released under the MIT License.
 
 using UnityEngine;
 
 namespace TestHelper.Input.SUT
 {
+#if UNITY_2021_1_OR_NEWER
+    [AddComponentMenu("/")]
+#else
+    // Not "/" on every version: Unity 2020.3 and earlier document only "" as the hidden menu name.
+    [AddComponentMenu("")]
+#endif
     internal class SampleController : MonoBehaviour
     {
         internal IInput Input { private get; set; } = new InputWrapper();
